@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7e8e9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 35rem;  /* Increase the width for larger card */
+}
+
+.card-title {
+    color: #ff69b4;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+label {
+    font-size: 18px;  /* Increase font size */
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+input {
+    margin: 10px 0;  /* Adjust margin for better spacing */
+}
+
+p {
+    margin: 30px 0;
+    color: rgb(230, 5, 5);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #ff69b4;
+    color: white;
+    border: 1px solid #ff69b4;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+
+.btn:hover {
+    background-color: #ff1493;
+    color: white;
+}

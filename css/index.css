@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#confirmationMessage {
+    margin-top: 20px;
+    color: green;
+}
+
+/* Rosa färger */
+.dark-pink {
+    color: #f10683; /* mörkrosa */
+}
+
+.light-pink {
+    color: #b51a68; /* ljusrosa */
+}
+
+.regular-pink {
+    color: #882c3b; /* vanlig rosa */
+}
+
+.pink-button {
+    background-color: #ff69b4; /* ljusrosa */
+    color: #fff;
+}
+
+.pink-button:hover {
+    background-color: #ff1493; /* mörkrosa */
+}
+
+/* Rosa punktlista */
+ul {
+    list-style-type: none; /* Ta bort standardpunkterna */
+}
+
+ul li {
+    position: relative; /* Relativ position för att kunna placera punkterna korrekt */
+    margin-bottom: 8px; /* Avstånd mellan varje punkt */
+    padding-left: 1.5em; /* Skapar utrymme för punkterna */
+}
+ul li::before {
+    content: "\2022"; /* Lägg till en punkt (•) före varje punkt */
+    color: #882c3b; /* ljusrosa */
+    margin-right: 8px; /* Avstånd mellan punkten och texten */
+    
+}
+
+.container {
+    position: relative;
+}
+
+#submitButton {
+    position: absolute;
+    top: 0;
+    right: -100px; /* Anpassa detta värde efter behov för att flytta knappen utanför ramen */
+}
+
+#viewListButton {
+    position: absolute;
+    top: 20px; /* Justera detta värde för att placera knappen där du vill ha den vertikalt */
+    right: 20px; /* Justera detta värde för att placera knappen där du vill ha den horisontellt */
+}

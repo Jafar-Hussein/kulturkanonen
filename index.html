@@ -1,28 +1,35 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start page</title>
+    <title>Kulturkanon</title>
+    <link rel="stylesheet" href="css/index.css">
+  
 </head>
 <body>
-    test
-    <p>hello</p>
-    <p>hello</p>
+    <div class="container">
+        <h1 class="dark-pink">Rösta på vad som ska vara med i Sveriges kulturkanon!</h1>
+        <h2 class="light-pink">Vad är en kulturkanon?</h2>
+        <p class="regular-pink">En kulturkanon är som en superviktig lista över grejer som är extra betydelsefulla för Sveriges kultur och historia. Regeringen har bestämt att vi ska skapa en sån lista som ska vara klar under 2025. Vad tycker du att regeringen ska inkludera? Det kan vara böcker, mode, musik, sport, filmer, konst, traditioner, spel, internetkultur, teater och mycket mer.</p>
+        <h2 class="light-pink">Så här röstar du:</h2>
+        <p class="regular-pink">Du kan lägga in din röst genom att skriva ditt förslag i textboxen nedan. Du får lägga hur många förslag du vill, men tänk på att skriva in en sak åt gången och tryck på "skicka in" efter varje förslag.</p>
+        <h2 class="light-pink">Viktiga instruktioner</h2>
+        <ul>
+            <li><span class="regular-pink">Se till att stava rätt, annars kanske din röst inte räknas.</span></li>
+            <li><span class="regular-pink">Behöver du hjälp? Fråga Ung Media Sverige!</span></li>
+            <li><span class="regular-pink">Inga fula ord eller trams, det kommer att raderas.</span></li>
+        </ul>
+        <h2 class="light-pink">Gör din röst hörd!</h2>
+        <p class="regular-pink">Nu har du chansen att påverka och sätta ung kultur på kartan! Dina förslag är viktiga för att skapa en kulturkanon som representerar oss alla. Rösta nu och hjälp till att forma framtidens kulturarv!</p>
+        <form id="submissionForm">
+            <label for="item" class="dark-pink">Vad ska finnas med i kulturkanonen?</label>
+            <input type="text" id="item" required>
+            <button type="submit" class="pink-button">Skicka in</button>
+        </form>
+        <div id="confirmationMessage"></div>
+        <button id="viewListButton" class="pink-button">Visa Lista</button>
+    </div>
+    <script src="javascript/index.js"></script>
 </body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start page</title>
-</head>
-<body>
-    test
-    <p>hello</p>
-    <p>hello</p>
-</body>
->>>>>>> 6227696edc6c237955dab4c9dbc8a5585d3ede9a
 </html>

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    
+    background-color: #e7e8e9;
+
+}
+
+h1{
+   color: #ff69b4; 
+}
+
+th:nth-child(2), td:nth-child(2) {
+    background-color: #ff69b4;
+    color: #ffffff;
+}
+
+.page-link {
+    background-color: #ff69b4;
+    color: white;
+    border: 1px solid #ff69b4;
+}
+
+.page-link:hover {
+    background-color: #ff1493;
+    color: white;
+    border: 1px solid #ff1493;
+}
+
+.page-item.active .page-link {
+    background-color: #ff1493;
+    border: 1px solid #ff1493;
+    color: white;
+}
+
+.page-item.disabled .page-link {
+    background-color: #ff69b4;
+    color: #ffffff;
+    pointer-events: none;
+    border: 1px solid #e9ecef;
+}

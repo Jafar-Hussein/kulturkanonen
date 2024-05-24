@@ -1,4 +1,14 @@
+const clearBtn = document.querySelector('.clearBtn');
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
+    //rensar localstorage och laddar om sidan
+    clearBtn.addEventListener('click', () => {
+        localStorage.clear();
+        location.reload();
+    });
+    
     // Skapar variabler för att hämta element från HTML
     const suggestionList = document.getElementById('suggestionList');
     const pagination = document.getElementById('pagination');

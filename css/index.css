@@ -7,31 +7,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Förhindrar skrollning */
+    overflow: hidden; 
 }
 
 .container {
     background-color: #fff;
-    padding: 20px 40px; /* Ökar inre marginal för bättre layout */
+    padding: 20px 40px; 
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 1000px; /* Ökar bredden på ramen */
+    max-width: 1000px; 
     margin: 20px;
-    overflow-y: auto; /* Tillåter vertikal skrollning om nödvändigt */
+    overflow-y: auto; 
 }
 
 h1 {
-    font-size: 2em; /* Gör rubriken större */
-    margin-bottom: 20px; /* Lägger till mellanrum under rubriken */
+    font-size: 2em; 
+    margin-bottom: 20px;
 }
 
 h2, p, ul {
     max-width: 900px;
     margin: 0 auto 20px;
-    text-align: left; /* Säkerställer att texten är vänsterjusterad */
-    line-height: 1.6; /* Ökar radavståndet för bättre läsbarhet */
-    font-size: 16px; /* Återställer fontstorleken till standard */
+    text-align: left;
+    line-height: 1.6;
+    font-size: 16px; 
 }
 
 input[type="text"] {
@@ -62,45 +62,45 @@ button:hover {
 
 /* Rosa färger */
 .dark-pink {
-    color: #f10683; /* mörkrosa */
+    color: #f10683; 
 }
 
 .light-pink {
-    color: #b51a68; /* ljusrosa */
+    color: #b51a68; 
 }
 
 .regular-pink {
-    color: #882c3b; /* vanlig rosa */
+    color: #882c3b;
 }
 
 .pink-button {
-    background-color: #ff69b4; /* ljusrosa */
+    background-color: #ff69b4; 
     color: #fff;
 }
 
 .pink-button:hover {
-    background-color: #ff1493; /* mörkrosa */
+    background-color: #ff1493; 
 }
 
 /* Rosa punktlista */
 ul {
-    list-style-type: none; /* Ta bort standardpunkterna */
-    padding: 0; /* Tar bort inre marginal */
-    text-align: left; /* Säkerställer att texten är vänsterjusterad */
+    list-style-type: none; 
+    padding: 0; 
+    text-align: left; 
 }
 
 ul li {
-    position: relative; /* Relativ position för att kunna placera punkterna korrekt */
-    margin-bottom: 8px; /* Avstånd mellan varje punkt */
-    padding-left: 1.5em; /* Skapar utrymme för punkterna */
+    position: relative; 
+    margin-bottom: 8px;
+    padding-left: 1.5em; 
 }
 
 ul li::before {
-    content: "\2022"; /* Lägg till en punkt (•) före varje punkt */
+    content: "\2022"; 
     position: absolute;
     left: 0;
-    color: #882c3b; /* ljusrosa */
-    margin-right: 8px; /* Avstånd mellan punkten och texten */
+    color: #882c3b; 
+    margin-right: 8px;
 }
 
 .container {
@@ -115,5 +115,5 @@ ul li::before {
 
 #viewListButton {
     display: inline-block;
-    margin-top: -50px; /* Lägger till lite toppmarginal för att flytta upp knappen */
+    margin-top: -50px; 
 }

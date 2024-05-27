@@ -56,9 +56,10 @@ button:hover {
 }
 
 #confirmationMessage {
-    margin-top: 20px;
+    margin: 20px 0;
     color: green;
 }
+
 
 /* Rosa färger */
 .dark-pink {
@@ -115,5 +116,5 @@ ul li::before {
 
 #viewListButton {
     display: inline-block;
-    margin-top: -50px; 
+    margin-top: 10px; 
 }

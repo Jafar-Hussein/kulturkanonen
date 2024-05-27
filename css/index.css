@@ -7,14 +7,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* Förhindrar skrollning */
 }
 
 .container {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 40px; /* Ökar inre marginal för bättre layout */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 1000px; /* Ökar bredden på ramen */
+    margin: 20px;
+    overflow-y: auto; /* Tillåter vertikal skrollning om nödvändigt */
+}
+
+h1 {
+    font-size: 2em; /* Gör rubriken större */
+    margin-bottom: 20px; /* Lägger till mellanrum under rubriken */
+}
+
+h2, p, ul {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    text-align: left; /* Säkerställer att texten är vänsterjusterad */
+    line-height: 1.6; /* Ökar radavståndet för bättre läsbarhet */
+    font-size: 16px; /* Återställer fontstorleken till standard */
 }
 
 input[type="text"] {
@@ -68,6 +85,8 @@ button:hover {
 /* Rosa punktlista */
 ul {
     list-style-type: none; /* Ta bort standardpunkterna */
+    padding: 0; /* Tar bort inre marginal */
+    text-align: left; /* Säkerställer att texten är vänsterjusterad */
 }
 
 ul li {
@@ -75,25 +94,26 @@ ul li {
     margin-bottom: 8px; /* Avstånd mellan varje punkt */
     padding-left: 1.5em; /* Skapar utrymme för punkterna */
 }
+
 ul li::before {
     content: "\2022"; /* Lägg till en punkt (•) före varje punkt */
+    position: absolute;
+    left: 0;
     color: #882c3b; /* ljusrosa */
     margin-right: 8px; /* Avstånd mellan punkten och texten */
-    
 }
 
 .container {
     position: relative;
+    text-align: center;
 }
 
 #submitButton {
-    position: absolute;
-    top: 0;
-    right: -100px; /* Anpassa detta värde efter behov för att flytta knappen utanför ramen */
+    display: inline-block;
+    margin-top: 20px;
 }
 
 #viewListButton {
-    position: absolute;
-    top: 20px; /* Justera detta värde för att placera knappen där du vill ha den vertikalt */
-    right: 20px; /* Justera detta värde för att placera knappen där du vill ha den horisontellt */
+    display: inline-block;
+    margin-top: -50px; /* Lägger till lite toppmarginal för att flytta upp knappen */
 }

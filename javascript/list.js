@@ -1,23 +1,23 @@
-const clearBtn = document.querySelector('.clearBtn');
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    const clearBtn = document.querySelector('.clearBtn');
+
     //rensar localstorage och laddar om sidan
     clearBtn.addEventListener('click', () => {
         localStorage.clear();
         location.reload();
     });
-    
+
     // Skapar variabler för att hämta element från HTML
     const suggestionList = document.getElementById('suggestionList');
     const pagination = document.getElementById('pagination');
+    const sortDescBtn = document.getElementById('sortDesc');
+    const sortAscBtn = document.getElementById('sortAsc');
 
     // Hämtar data från localStorage och om det inte finns någon data så sätts suggestions till en tom array
     const suggestions = JSON.parse(localStorage.getItem('kanonItems')) || [];
 
     // Räknar antalet förslag och sparar i en variabel
-    const suggestionCount = suggestions.reduce((acc, suggestion) => {
+    let suggestionCount = suggestions.reduce((acc, suggestion) => {
         acc[suggestion] = (acc[suggestion] || 0) + 1;
         return acc;
     }, {});
@@ -107,6 +107,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextLi = createPageItem(currentPage + 1, 'Nästa');
         pagination.appendChild(nextLi);
     }
+
+    // Sorteringsfunktioner
+    function sortSuggestions(order) {
+        suggestionCount = Object.entries(suggestionCount)
+            .sort((a, b) => order === 'desc' ? b[1] - a[1] : a[1] - b[1])
+            .reduce((acc, [key, value]) => ({ ...acc, [key]: value }), {});
+        renderTablePage(currentPage);
+        renderPagination(totalPages);
+    }
+
+    // Event Listeners för sortering
+    sortDescBtn.addEventListener('click', () => sortSuggestions('desc'));
+    sortAscBtn.addEventListener('click', () => sortSuggestions('asc'));
 
     // Renderar tabellen och pagination
     renderTablePage(currentPage);

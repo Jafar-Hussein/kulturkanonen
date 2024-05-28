@@ -6,36 +6,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden; 
+    min-height: 100vh; 
 }
 
 .container {
     background-color: #fff;
-    padding: 20px 40px; 
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 1000px; 
+    max-width: 800px;
+    width: 100%; /* Gör att containern använder hela bredden på mindre skärmar */
     margin: 20px;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 h1 {
-    font-size: 2em; 
+    font-size: 2em;
     margin-bottom: 20px;
 }
 
 h2, p, ul {
-    max-width: 900px;
     margin: 0 auto 20px;
     text-align: left;
     line-height: 1.6;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 input[type="text"] {
-    width: 80%;
+    width: 100%; /* Ändra till 100% för att ta upp hela bredden */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -44,30 +43,27 @@ input[type="text"] {
 
 button {
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #ff69b4; /* Lägg till rosa border */
     border-radius: 4px;
-    background-color: #007BFF;
+    background-color: #ff69b4; /* Rosa bakgrundsfärg */
     color: #fff;
     cursor: pointer;
 }
-
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff1493; /* Mörkare rosa på hover */
 }
-
 #confirmationMessage {
     margin: 20px 0;
     color: green;
 }
 
-
 /* Rosa färger */
 .dark-pink {
-    color: #f10683; 
+    color: #f10683;
 }
 
 .light-pink {
-    color: #b51a68; 
+    color: #b51a68;
 }
 
 .regular-pink {
@@ -75,46 +71,47 @@ button:hover {
 }
 
 .pink-button {
-    background-color: #ff69b4; 
+    background-color: #ff69b4;
     color: #fff;
+    border: 2px solid #ff69b4; /* Lägg till rosa border */
 }
 
 .pink-button:hover {
-    background-color: #ff1493; 
+    background-color: #ff1493;
+    border: 2px solid #ff69b4;
 }
 
 /* Rosa punktlista */
 ul {
-    list-style-type: none; 
-    padding: 0; 
-    text-align: left; 
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
 }
 
 ul li {
-    position: relative; 
+    position: relative;
     margin-bottom: 8px;
-    padding-left: 1.5em; 
+    padding-left: 1.5em;
 }
 
 ul li::before {
-    content: "\2022"; 
+    content: "\2022";
     position: absolute;
     left: 0;
-    color: #882c3b; 
+    color: #882c3b;
     margin-right: 8px;
 }
 
-.container {
-    position: relative;
-    text-align: center;
-}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
 
-#submitButton {
-    display: inline-block;
-    margin-top: 20px;
-}
+    h2, p, ul {
+        font-size: 14px;
+    }
 
-#viewListButton {
-    display: inline-block;
-    margin-top: 10px; 
+    .container {
+        padding: 10px;
+    }
 }
